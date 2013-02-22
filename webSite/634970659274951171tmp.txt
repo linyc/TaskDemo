@@ -1,0 +1,7 @@
+﻿select trunc(logintime),count(0) from user_curd.userlogin where logintime>=trunc(sysdate-5) and logintime<trunc(sysdate+1) and loginsource ='Assistant' and loginresult=1 group by trunc(logintime) order by trunc(logintime) 
+
+------------------
+http://github-windows.s3.amazonaws.com/GitHubSetup.exe
+http://www.mongodb.org/dr/downloads.mongodb.org/win32/mongodb-win32-i386-2.2.3-rc0.zip/download
+testhj04旗舰店
+http://tieba.baidu.com/p/2115888843
