@@ -4,6 +4,8 @@
 <head>
     <title></title>
     <script src="Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.json-2.4.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.form.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
             $("#btnSub").click(function () {
@@ -14,13 +16,47 @@
                 //                });
                 $.ajax({
                     url: "/website/JsHandler.ashx",
-                    type:"post",
-                    data: { txt: $(":text").val(),rd:$(":radio").val(),file1:$("input[name=file1]") },
+                    type: "post",
+                    data: { txt: $(":text").val(), rd: $(":radio").val(), file1: $("input[name=file1]") },
                     success: function (rtn) {
                         alert(rtn);
                     }
                 });
             })
+
+            $("#btnAsmx").click(function () {
+                //                $.ajax({
+                //                    type: "POST",
+                //                    url: "/website/webservice.asmx/Add",
+                //                    contentType: "application/json",
+                //                    data: "{ a: 1, b: 2 }",
+                //                    dataType: "json",
+                //                    success: function (result) {
+                //                        $("#asmxRet").text(result.d);
+                //                    }
+                //                });
+
+                var cus = { Name: 'haha', Sex: 1, Age: 25 };
+                var jsonString = $.toJSON({ cus: cus });
+                $.ajax({
+                    type: "POST",
+                    url: "/website/webservice.asmx/GetMsg",
+                    contentType: "application/json",
+                    data: jsonString,
+                    dataType: 'json',
+                    success: function (result) {
+                        $("#asmxRet").text(result.d);
+                    }
+                });
+            });
+
+            $("#btnJqueryform").click(function () {
+                $("#fm1").ajaxForm({
+                    success: function (result) {
+                        $("#jqueryRet").html(result);
+                    }
+                });
+            });
         });
     </script>
 </head>
@@ -31,10 +67,20 @@ radio:<label><input type="radio" name="rd" value="rdA" />rdA</label><label><inpu
 checkbox:<label><input type="checkbox" name="cbox" value="cboxA" />cboxA</label><label><input type="checkbox" name="cbox" value="cboxB" />cboxB</label><label><input type="checkbox" name="cbox" value="cboxC" />cboxC</label><br />
 select:<select name="sel"><option>selA</option><option>selB</option><option>selC</option></select><br />
 file:<input type="file" name="file1" /><br />
-<input type="file" name="file2" /><br />
+<input type="file" name="file2" /><br /><hr />
+<p>
 <input type="submit"  value="submit" name="btn"/>
 <input type="submit" value="query" name="btn" />
 <input type="button" value="button" id="btnSub" />
+</p>
+<p>
+<input type="button" value="ActionWithAsmx" id="btnAsmx" />
+<span id="asmxRet"></span>
+</p>
+<p>
+<input type="submit" value="jquery.form" id="btnJqueryform" />
+<span id="jqueryRet"></span>
+</p>
 </form>
 </body>
 </html>

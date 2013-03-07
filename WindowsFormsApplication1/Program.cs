@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
             //cw.WindowCreated += new CWin32CBTHook.CbtEventHandler(cw_WindowCreated);
             //cw.WindowDestroyed += new CWin32CBTHook.CbtEventHandler(cw_WindowDestroyed);
             //cw.InstallHook();
-            Application.Run(new Form7());
+            Application.Run(new Form2());
         }
 
         static void cw_WindowDestroyed(object sender, CWin32CBTHook.CbtEventArgs e)

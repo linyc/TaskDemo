@@ -29,10 +29,11 @@ public class JsHandler : IHttpHandler
         //}
         for (int i = 0; i < files.Count; i++)
         {
-            files[i].SaveAs(System.IO.Path.Combine(context.Server.MapPath("~/"), DateTime.Now.Ticks+files[i].FileName));
+            files[i].SaveAs(System.IO.Path.Combine(context.Server.MapPath("~/upload/"), DateTime.Now.Ticks+files[i].FileName));
         }
 
-        context.Request.Files["file1"].SaveAs(System.IO.Path.Combine(context.Server.MapPath("~/"), DateTime.Now.Ticks.ToString()));
+        if(context.Request.Files["file1"]!=null)
+            context.Request.Files["file1"].SaveAs(System.IO.Path.Combine(context.Server.MapPath("~/upload/"), DateTime.Now.Ticks.ToString()));
 
         context.Response.Write(string.Format("{0}{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}","<br/>", text, radio, checkbox, select,button,files.GetType()));
         

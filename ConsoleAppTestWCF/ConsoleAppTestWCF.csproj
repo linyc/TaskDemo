@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B41A9F36-4798-4ABA-9C95-3A9ACFD41B6D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleAppTestWCF</RootNamespace>
+    <AssemblyName>ConsoleAppTestWCF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CN100.AssistantService.BLL">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.AssistantService.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.AssistantService.BLL.Model">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.AssistantService.BLL.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.AssistantService.Entity">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.AssistantService.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.AssistantService.Enum">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.AssistantService.Enum.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.AssistantService.IBLL">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.AssistantService.IBLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.AssistantService.Utility">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.AssistantService.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.EnterprisePlatform.Cache">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.EnterprisePlatform.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.EnterprisePlatform.Configuration">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.EnterprisePlatform.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.EnterprisePlatform.Utility">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.EnterprisePlatform.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.EnterprisePlatform.Wcf.Core">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.EnterprisePlatform.Wcf.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.EnterprisePlatform.Wcf.Core.Config">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.EnterprisePlatform.Wcf.Core.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.EnterprisePlatform.Web.Core">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.EnterprisePlatform.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.FileUpload">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.FileUpload.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.FileUpload.Configuration">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.FileUpload.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.FileUpload.Service">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.FileUpload.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="CN100.Utility">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\CN100.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Magnum">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\Magnum.dll</HintPath>
+    </Reference>
+    <Reference Include="MDSCommonLib">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\MDSCommonLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net35">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utility">
+      <HintPath>..\..\..\Ever\CN100.Assistant\CN100.AssistantService2.0\WcfHosting\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WCFManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
