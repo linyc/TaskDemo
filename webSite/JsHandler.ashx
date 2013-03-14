@@ -16,6 +16,7 @@ public class JsHandler : IHttpHandler
         //WeakReference wrf = new WeakReference(cd);
         //context.Response.ContentType = "text/plain";
         //context.Response.Write("Hello " + context.Request["val"]);
+        
 
         string text = context.Request["txt"];
         string radio = context.Request["rd"];

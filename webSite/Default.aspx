@@ -36,5 +36,12 @@
     <input type="button" id="btnSub" value="click me" />
     <div id="ret"> </div>
     </form>
+    <hr />
+    <form id="fm2" action="<%=Request.RawUrl %>" method="post">
+        <input type="text" name="kk" value="223" />
+        <input type="submit" value="submit" />
+    </form>
+    <p>Item:<%= this.ItemVal%></p>
+    <p>Item:<%= this.ParamsVal%></p>
 </body>
 </html>

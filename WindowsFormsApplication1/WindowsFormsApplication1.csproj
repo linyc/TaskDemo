@@ -47,6 +47,9 @@
     <Reference Include="MyControlEngine">
       <HintPath>..\..\..\CN100.Assistant2.0\CN100.AssistantClient2.0\Lib\CN100\MyControlEngine.dll</HintPath>
     </Reference>
+    <Reference Include="NHtmlFilter">
+      <HintPath>..\DLL\NHtmlFilter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />

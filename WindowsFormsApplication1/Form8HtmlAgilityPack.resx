@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>&lt;img src=\"http://img03.cn100.com/01220130117001e72411922e684ed0b9869c9e7771ccbe.jpg=88X88.jpg\" onclick=\"window.location.href='\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x71\x71\x2E\x63\x6F\x6D\x2F ';\"/&gt;</value>
+  </data>
 </root>

@@ -33,6 +33,7 @@ public class WebService : System.Web.Services.WebService {
     [WebMethod]
     public string GetMsg(Customer cus)
     {
+        //Context.Response.StatusCode = 500;
         return string.Format("Name:{0}, Sex:{1}, Age:{2}", cus.Name, cus.Sex, cus.Age);
     }
 }

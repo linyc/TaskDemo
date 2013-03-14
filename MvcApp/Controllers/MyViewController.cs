@@ -13,6 +13,7 @@ namespace MvcApp.Controllers
         public ActionResult MyViewPage()
         {
             return View();
+            
         }
 
         public int Add(int a, int b)
