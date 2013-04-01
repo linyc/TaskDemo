@@ -92,5 +92,14 @@ namespace WindowsFormsApplication1
             f.BeginInvoke(null, null);
             t.BeginInvoke(null, null);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.TopLevel = false;
+            f2.Show();
+            f2.Dock = DockStyle.Fill;
+            this.tabPage1.Controls.Add(f2);
+        }
     }
 }
