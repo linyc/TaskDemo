@@ -37,8 +37,11 @@
   <ItemGroup>
     <Compile Include="ArraySegmentTest.cs" />
     <Compile Include="CacheTest.cs" />
+    <Compile Include="ClassPropertiesTest.cs" />
+    <Compile Include="EnumTest.cs" />
     <Compile Include="Extension.cs" />
     <Compile Include="ColorFormatTest.cs" />
+    <Compile Include="LinqTest.cs" />
     <Compile Include="MongoDbTest.cs" />
     <Compile Include="ORMTest.cs" />
     <Compile Include="Program.cs" />

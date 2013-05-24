@@ -17,8 +17,10 @@ namespace WindowsFormsApplication1
         public Form4()
         {
             InitializeComponent();
+            MessageBox.Show("\\".Length.ToString());
+
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.DataSource = sourceUser();
+            this.dataGridView2.DataSource = sourcekv(); return;
 
             this.richTextBox1.Text = "http://static.googleadsserving.cn/pagead/imgad?id=CNLhmKSW5fbNBRCsAhj6ATIIrsMEwkooOyA";
 
@@ -103,6 +105,16 @@ namespace WindowsFormsApplication1
             u = new User { Name = "bb", nikename = "bBb" };
             uList.Add(u);
             return uList;
+        }
+        dynamic sourcekv()
+        {
+            var v = new Dictionary<int, string>();
+            for (int i = 0; i < 5; i++)
+            {
+                v.Add(i, i.ToString());
+            }
+
+            return v.ToList();
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

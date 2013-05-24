@@ -12,7 +12,7 @@ using System.Reflection;
 namespace ConsoleApp
 {
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
             #region ArraySegmentTest
@@ -56,6 +56,29 @@ namespace ConsoleApp
             //Console.Read();
             #endregion
 
+            #region LinqTest
+            //LinqTest lt = new LinqTest();
+            //lt.get(0);
+            #endregion 
+
+            #region EnumTest
+            EnumTest et = new EnumTest();
+            et.myenum = MyEnum.b;
+            Console.WriteLine(Convert.ToInt16(et.myenum));
+            Console.Read();
+            #endregion
+
+
+            #region ClassPropertiesTest
+            //IClassPropertiesTest cpt2 = new ClassPropertiesTest2();
+            //cpt2.Count = 2;
+            //Console.WriteLine(cpt2.Count);
+            //Console.Read();
+            //ClassPropertiesTest cpt = cpt2 as ClassPropertiesTest;
+            //Console.WriteLine(cpt.sub.A);
+            #endregion
+
+
             //string s = "http://tu.taobaocdn.com/s1/453271987/2011年秋冬牛仔/10595/10595主图";
             //Console.WriteLine(Path.GetExtension(s));
             //Console.Read();
@@ -71,6 +94,8 @@ namespace ConsoleApp
             //{
             //    Console.WriteLine(nvCol[i]);
             //}
+
+
 
             Person p = new Person();
             p.UName = "ormtest";
