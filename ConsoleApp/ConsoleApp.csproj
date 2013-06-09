@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ArraySegmentTest.cs" />
+    <Compile Include="AttributeTest.cs" />
     <Compile Include="CacheTest.cs" />
     <Compile Include="ClassPropertiesTest.cs" />
     <Compile Include="EnumTest.cs" />

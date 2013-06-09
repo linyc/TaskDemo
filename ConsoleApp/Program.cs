@@ -94,7 +94,7 @@ namespace ConsoleApp
             //{
             //    Console.WriteLine(nvCol[i]);
             //}
-
+            AttributeTest.k();
 
 
             Person p = new Person();
