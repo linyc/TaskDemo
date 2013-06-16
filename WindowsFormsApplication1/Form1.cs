@@ -99,7 +99,7 @@ namespace WindowsFormsApplication1
             f2.TopLevel = false;
             f2.Show();
             f2.Dock = DockStyle.Fill;
-            this.tabPage1.Controls.Add(f2);
+            this.tabPage1.Controls.Add(f2);this.button1.per
         }
     }
 }
