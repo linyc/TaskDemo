@@ -62,10 +62,10 @@ namespace ConsoleApp
             #endregion 
 
             #region EnumTest
-            EnumTest et = new EnumTest();
-            et.myenum = MyEnum.b;
-            Console.WriteLine(Convert.ToInt16(et.myenum));
-            Console.Read();
+            //EnumTest et = new EnumTest();
+            //et.myenum = MyEnum.b;
+            //Console.WriteLine(Convert.ToInt16(et.myenum));
+            //Console.Read();
             #endregion
 
 
@@ -94,24 +94,29 @@ namespace ConsoleApp
             //{
             //    Console.WriteLine(nvCol[i]);
             //}
-            AttributeTest.k();
+            //AttributeTest.k();
+
+Dictionary<int, object> dic = new Dictionary<int, object>();
+ThreadTest t = new ThreadTest();
+t.CreateThread(dic);
+Console.Read();
 
 
-            Person p = new Person();
-            p.UName = "ormtest";
-            p.USex = "man";
-            p.UAge = 12;
+            //Person p = new Person();
+            //p.UName = "ormtest";
+            //p.USex = "man";
+            //p.UAge = 12;
 
-            PropertyInfo[] proInfos = p.GetType().GetProperties();
-            foreach (PropertyInfo item in proInfos)
-            {
-                object[] objAttr = item.GetCustomAttributes(typeof(DataFieldAttribute), false);
-                if (objAttr != null)
-                    Console.WriteLine(string.Format("属性名：{0}\t对应数据库字段：{1}\t数据库类型：{2}"
-                                , item.Name, (objAttr[0] as DataFieldAttribute).FieldName, (objAttr[0] as DataFieldAttribute).FieldType));
-                Console.WriteLine(item.GetValue(p, null).ToString());
-                Console.WriteLine(objAttr[0].GetType().Name);
-            }
+            //PropertyInfo[] proInfos = p.GetType().GetProperties();
+            //foreach (PropertyInfo item in proInfos)
+            //{
+            //    object[] objAttr = item.GetCustomAttributes(typeof(DataFieldAttribute), false);
+            //    if (objAttr != null)
+            //        Console.WriteLine(string.Format("属性名：{0}\t对应数据库字段：{1}\t数据库类型：{2}"
+            //                    , item.Name, (objAttr[0] as DataFieldAttribute).FieldName, (objAttr[0] as DataFieldAttribute).FieldType));
+            //    Console.WriteLine(item.GetValue(p, null).ToString());
+            //    Console.WriteLine(objAttr[0].GetType().Name);
+            //}
 
             Console.ReadLine();
         }
