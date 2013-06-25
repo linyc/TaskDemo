@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using MyControlEngine;
+//using MyControlEngine;
 using System.Collections;
 
 namespace WindowsFormsApplication1
@@ -24,14 +24,14 @@ namespace WindowsFormsApplication1
             Application.Run(new Form4());
         }
 
-        static void cw_WindowDestroyed(object sender, CWin32CBTHook.CbtEventArgs e)
-        {
-            System.IO.File.AppendAllText("b.txt", (i--).ToString() + ',');
-        }
-        static int i = 0;
-        static void cw_WindowCreated(object sender, CWin32CBTHook.CbtEventArgs e)
-        {
-            System.IO.File.AppendAllText("a.txt", (i++).ToString()+',');
-        }
+        //static void cw_WindowDestroyed(object sender, CWin32CBTHook.CbtEventArgs e)
+        //{
+        //    System.IO.File.AppendAllText("b.txt", (i--).ToString() + ',');
+        //}
+        //static int i = 0;
+        //static void cw_WindowCreated(object sender, CWin32CBTHook.CbtEventArgs e)
+        //{
+        //    System.IO.File.AppendAllText("a.txt", (i++).ToString()+',');
+        //}
     }
 }

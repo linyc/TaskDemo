@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
         public Form4()
         {
             InitializeComponent();
+
             MessageBox.Show("\\".Length.ToString());
 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -127,6 +128,11 @@ namespace WindowsFormsApplication1
                     dataGridView1.Rows[i].Cells[1].Value = "yes";
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Convert.ToString(this.numericUpDown1.Value));
         }
     }
 }
