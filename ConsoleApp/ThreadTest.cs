@@ -1,9 +1,15 @@
-﻿using System;
+﻿
+#define DEBUG
+
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Diagnostics;
+
 
 namespace ConsoleApp
 {
@@ -28,6 +34,7 @@ namespace ConsoleApp
             }
         }
 
+        [Conditional("DEBUG")]
         private void AddData(Dictionary<int, object> dic, int i)
         {
             lock (obj)

@@ -218,9 +218,19 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(52, 359);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 21);
             this.numericUpDown1.TabIndex = 7;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // button3
             // 
