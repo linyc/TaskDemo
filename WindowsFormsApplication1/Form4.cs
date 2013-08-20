@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Net;
+using System.Runtime.InteropServices;
 
 namespace WindowsFormsApplication1
 {
@@ -134,6 +135,57 @@ namespace WindowsFormsApplication1
         {
             MessageBox.Show(Convert.ToString(this.numericUpDown1.Value));
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.dataGridView3.AutoGenerateColumns = false;
+            List<User> us = new List<User>();
+            for (int i = 0; i < 4; i++)
+            {
+                us.Add(new User { Name = i.ToString(), nikename = "n_" + i, caption="c_"+i });
+            }
+            this.dataGridView3.DataSource = us;
+
+            User u = this.dataGridView3.Rows[0].DataBoundItem as User;
+            MessageBox.Show(u.caption);
+        }
+
+        #region 实现整个窗体的磨砂效果，win7有效
+        /*
+        [DllImport("dwmapi.dll", PreserveSig = false)]
+        static extern void DwmExtendFrameIntoClientArea(IntPtr hwnd, ref MARGINS margins);
+
+        [DllImport("dwmapi.dll", PreserveSig = false)]
+        static extern bool DwmIsCompositionEnabled();
+
+        protected override void OnLoad(EventArgs e)
+        {
+            if (DwmIsCompositionEnabled())
+            {
+                MARGINS m = new MARGINS();
+                m.Right = -1;
+                DwmExtendFrameIntoClientArea(this.Handle, ref m);
+            }
+            base.OnLoad(e);
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            base.OnPaintBackground(e);
+            if (DwmIsCompositionEnabled())
+            {
+                e.Graphics.Clear(Color.Black);
+            }
+        }
+        public struct MARGINS
+        {
+            public int Left;
+            public int Right;
+            public int Top;
+            public int Bottom;
+        } 
+        */
+        #endregion
     }
 }
 
@@ -141,4 +193,5 @@ class User
 {
     public string Name { get; set; }
     public string nikename { get; set; }
+    public string caption { get; set; }
 }
